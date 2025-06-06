@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoDM - Messages Insta Automatisés</title>
+</head>
+<body>
+  <h1>AutoDM 💬</h1>
+  <p>Écris ton message à envoyer :</p>
+  <textarea id="message" rows="4" cols="50"></textarea>
+
+  <p>Ajoute les noms d'utilisateurs (1 par ligne) :</p>
+  <textarea id="usernames" rows="6" cols="50"></textarea>
+
+  <br><br>
+  <button onclick="envoyer()">Envoyer les messages</button>
+
+  <p id="resultat"></p>
+
+  <script>
+    function envoyer() {
+      const msg = document.getElementById('message').value;
+      const users = document.getElementById('usernames').value.split('\n');
+      document.getElementById('resultat').innerText =
+        `Messages envoyés à : ${users.join(', ')} avec : "${msg}"`;
+    }
+  </script>
+</body>
+</html>

@@ -1,31 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoDM - Messages Insta Automatisés</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoDM - Messages Insta Automatiques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fef4fc;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #d20078;
+    }
+
+    .button {
+      background-color: #d20078;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>AutoDM 💬</h1>
-  <p>Écris ton message à envoyer :</p>
-  <textarea id="message" rows="4" cols="50"></textarea>
-
-  <p>Ajoute les noms d'utilisateurs (1 par ligne) :</p>
-  <textarea id="usernames" rows="6" cols="50"></textarea>
-
-  <br><br>
-  <button onclick="envoyer()">Envoyer les messages</button>
-
-  <p id="resultat"></p>
-
-  <script>
-    function envoyer() {
-      const msg = document.getElementById('message').value;
-      const users = document.getElementById('usernames').value.split('\n');
-      document.getElementById('resultat').innerText =
-        `Messages envoyés à : ${users.join(', ')} avec : "${msg}"`;
-    }
-  </script>
+  <h1>Bienvenue sur AutoDM</h1>
+  <p>L'outil pour envoyer automatiquement des messages privés sur Instagram.</p>
+  <button class="button">Commencer maintenant</button>
 </body>
 </html>
